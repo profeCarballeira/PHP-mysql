@@ -4,7 +4,7 @@ $username = "martin";
 $password = "abc123.";
 $dbname = "world";
 
-//REMEMBER: keywords in SQL ar not CASESEMSITIVE, but OBJECT NAMES (tables, rows....) ARE
+//REMEMBER: keywords in SQL ar not CASESENSITIVE, but OBJECT NAMES (tables, rows....) ARE
 
 try {
   //1. Open
@@ -14,7 +14,11 @@ try {
   //echo "Connected successfully";
 
   //2. Process
-  $sql =  "SELECT * from city";
+  //$sql =  "SELECT * from city";
+  //$sql = "SELECT Name, Population FROM city WHERE CountryCode ='ESP'";
+  //$sql = "SELECT Name, Population FROM city WHERE CountryCode =  (SELECT Code FROM country WHERE Name ='Spain')"; 
+  //$sql = "SELECT city.Name, city.Population FROM city, country WHERE city.CountryCode=country.Code AND country.Name='Spain'"; 
+  $sql = "SELECT city.Name, city.Population FROM city INNER JOIN country ON city.CountryCode=country.Code WHERE country.Name='Spain'"; 
 
   $result = $conn->query ($sql);
 
