@@ -10,6 +10,8 @@ $dbname = "world";
 try {
   //1. Open
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  //important to get the charset of data
+  $conn->exec("set names utf8");
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //echo "Connected successfully";
@@ -28,7 +30,6 @@ try {
 }
 
 //3. Close
-//$conn->Close();
 $conn = null
 
 ?>

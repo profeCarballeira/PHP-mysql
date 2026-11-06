@@ -32,7 +32,6 @@ try {
 }
 
 //3. Close
-$conn->Close();
-// $conn = null
+$conn = null
 
 ?>
