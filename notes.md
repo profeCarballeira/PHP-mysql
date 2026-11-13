@@ -1,3 +1,6 @@
+# World example database
+https://dev.mysql.com/doc/index-other.html
+
 # Before the first connection (program 01)
 > steps:
 1. turn on the containers
