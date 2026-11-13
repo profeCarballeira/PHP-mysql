@@ -36,8 +36,7 @@ try {
   echo "<br>Record inserted";
 
 } catch(PDOException $e) {
-  echo "Con
-  nection failed: " . $e->getMessage();
+  echo "Connection failed: " . $e->getMessage();
 }
 
 //Close

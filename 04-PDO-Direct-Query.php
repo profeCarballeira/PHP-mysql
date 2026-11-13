@@ -27,8 +27,7 @@ try {
   }
 
 } catch(PDOException $e) {
-  echo "Con
-  nection failed: " . $e->getMessage();
+  echo "Connection failed: " . $e->getMessage();
 }
 
 //3. Close
